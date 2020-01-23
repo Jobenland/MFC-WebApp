@@ -2,7 +2,7 @@ import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-
+#can leave blank if opt out of secret key option
 class Config(object):
     DEBUG = False
     TESTING = False
