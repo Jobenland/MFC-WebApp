@@ -23,7 +23,7 @@ pip install -r requirements.txt
 run `manage.py runserver` to start the server on `127.0.0.1:5000`
 or run `manage.py runserver --host='<insert-ip-here>'` to start the server on the IP of the machine
 
-to encrypt cookie/session edit line `9` of `config.py`
+to encrypt cookie/session edit line `9` of `config.py` by putting
 
 and example would be
 ```python
@@ -53,6 +53,7 @@ many options are availble for starting the server
 
 The best way to deploy is the combine `apache2` and this app together with something like `nginx` for security. For development, the best way is to create a shell script to launch the python program and then create a service out of the shell script to start the webapp on start.
 
+example shell script
 ```shell
 #!/bin/sh
 # launcher.sh
@@ -62,7 +63,8 @@ cd home/pi/webapp/MFCW
 python3 manage.py runserver --host=10.0.5.125
 cd/
 ```
-```service
+
+```shell
 [unit]
 Description=WebMFC
 After=network.target
@@ -98,7 +100,9 @@ No versioning control has been set up yet but I am working on having this work i
 * **Jonathan Obenland** - *Creating Webapp for use with MFC* - [Jonathan Obenland](https://github.com/jobenland)
 
 ## Credit
+
 * **Daniel Abeles** - *Helped with code base* - [Den1al](https://www.twitter.com/Daniel_Abeles)
+
 ## License
 
 This project is licensed under the MIT License
