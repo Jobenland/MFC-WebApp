@@ -1,3 +1,4 @@
+![size badge](https://img.shields.io/github/repo-size/Jobenland/MFC-WebApp.svg) ![license](https://img.shields.io/github/license/Jobenland/MFC-WebApp.svg) ![build](https://img.shields.io/badge/Build-Passing-green.svg) ![issues](https://img.shields.io/github/issues/Jobenland/MFC-WebApp.svg) ![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg) ![python](https://img.shields.io/badge/Python-3.x-lightgrey.svg) ![toplang](https://img.shields.io/github/languages/top/Jobenland/MFC-WebApp.svg) ![quality](https://img.shields.io/badge/Code%20Quality-Testing...-red.svg)
 # MFC Webapp
 
 This program is meant to be ran on the same server that is running the MFC. In this case it has been developed for use in a RaspberryPi setup. Currently the app in in development mode so once completed should NOT be ran as a CLI command. 
