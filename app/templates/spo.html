@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+<!-- Define a title -->
+{% block title %} Advanced {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='options.css') }}"> {% endblock %}
+
+<!-- Scripts -->
+{% block scripts %}
+<script src="{{ url_for('static', filename='options.js') }}"></script> {% endblock %}
+
+<!-- Main Body -->
+{% block body %}
+
+<header>
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css" rel="stylesheet">
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.0.min.css" rel="stylesheet">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="https://energy.umd.edu">MEII</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/options">Special Options<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Create Account</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <p class="text-danger">You are connected to 127.0.0.1:5000</p>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main" class="flex-shrink-0">
+  <div class="card text-center">
+    <div class="card-header">
+        Custom Commands
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <h1>To-Do <small>List</small></h1>
+        <form role="form">
+          <input type="text" class="form-control" placeholder="Your Task" name="task">
+        </form>
+        <button type="button" class="btn btn btn-primary">Add</button>
+          </div>
+          <div></div>
+        <ul class="list-unstyled" id="todo"></ul>
+    </div>
+    <form action="{{ url_for('main.all') }}" method="post">
+      <div class="card-footer text-muted text-success">
+        <button class="btn btn-danger">EMERGENCY OFF</a>
+      </div>
+    </form>
+</div>
+</main>
+{% endblock %}

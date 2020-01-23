@@ -1,0 +1,27 @@
+
+<!-- Main Body -->
+{% block body %}
+<link rel="stylesheet" href="/static/mfc.css">
+
+<div class="container">
+    <div id="header">
+        <h1>MEII Mass Flow Controller</h1>
+        <h2>UNAUTHORIZED ACCESS PROHIBITED</h2>
+    </div>
+    <ul>
+        <li><a href="/register" class="text-center new-account">Create an account</a></li> 
+        <li><a href="/logout" class="text-center new-account">Logout</a></li>  
+    </ul>
+    <div id='body'>
+        <form action="{{ url_for('main.changevol') }}" method="post">
+            <input type="text" name="voltage" placeholder="Enter voltage 0-5v">
+            <input type="text" name="channel" placeholder="Enter Channel or 47 for all">
+            <input type="submit">
+        </form>
+        <div id='info_section'>
+            <p>{{ data }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
