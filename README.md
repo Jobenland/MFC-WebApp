@@ -61,7 +61,7 @@ example shell script
 cd /
 cd home/pi/webapp/MFCW
 python3 manage.py runserver --host=10.0.5.125
-cd/
+cd /
 ```
 
 ```shell
