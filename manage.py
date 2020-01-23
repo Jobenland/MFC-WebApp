@@ -12,6 +12,6 @@ def createdb(drop_first=False):
         db.drop_all()
     db.create_all()
 
-
+#additional run options given in CLI. NOT HERE
 if __name__ == '__main__':
     manager.run()
