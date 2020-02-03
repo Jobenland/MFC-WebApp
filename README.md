@@ -26,6 +26,8 @@ or run `manage.py runserver --host='<insert-ip-here>'` to start the server on th
 
 to encrypt cookie/session edit line `9` of `config.py` by putting
 
+Furthermore, a recaptcha may be used to reduce the threat of a dictionary/brute force attack. this can be added by editing line `13 & 14` of `config.py`
+
 and example would be
 ```python
 class Config(object):
